@@ -1,0 +1,26 @@
+{
+  "name": "sys",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --port 8084",
+    "build": "vue-cli-service build",
+    "inspect": "vue inspect > inspect.js"
+  },
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "single-spa-vue": "^1.5.4",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-router": "^4.0.0",
+    "@vue/cli-plugin-vuex": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

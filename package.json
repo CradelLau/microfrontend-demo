@@ -1,0 +1,27 @@
+{
+  "name": "master",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:sys\" \"vue-cli-service serve\"",
+    "dev:sys": "cd sys && npm run dev",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.3.3",
+    "qiankun": "^1.2.3",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.5",
+    "@vue/cli-plugin-router": "^4.0.5",
+    "@vue/cli-plugin-vuex": "^4.0.5",
+    "@vue/cli-service": "^4.0.5",
+    "concurrently": "^5.0.0",
+    "sass": "^1.23.1",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
