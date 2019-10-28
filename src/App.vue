@@ -9,6 +9,7 @@
       <ol>
         <li><a @click="goto('/')">首页</a></li>
         <li><a @click="goto('/sys')">系统管理</a></li>
+        <li><a @click="goto('/vue')">Vue</a></li>
       </ol>
     </nav>
     <!--<router-view/>-->
@@ -26,8 +27,7 @@ export default {
   methods: {
     goto(href) {
       //location.href = href
-      //this.$router.push(href)
-      location.hash = "#" + href
+      this.$router.push(href)
     }
   }
 }

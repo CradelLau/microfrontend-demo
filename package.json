@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run dev:sys\" \"vue-cli-service serve\"",
+    "install": "concurrently \"npm run install:sys\" \"npm run install:vue\" \"npm install\"",
+    "install:sys": "cd sys && npm install",
+    "install:vue": "cd vue && npm install",
+    "dev": "concurrently \"npm run dev:sys\" \"npm run dev:vue\" \"vue-cli-service serve\"",
     "dev:sys": "cd sys && npm run dev",
-    "build": "concurrently \"npm run build:sys\" \"vue-cli-service build\"",
-    "build:sys": "cd sys && npm run build"
+    "dev:vue": "cd vue && npm run dev",
+    "build": "concurrently \"npm run build:sys\" \"npm run build:vue\" \"vue-cli-service build\"",
+    "build:sys": "cd sys && npm run build",
+    "build:vue": "cd sys && npm run build"
   },
   "dependencies": {
     "core-js": "^3.3.3",

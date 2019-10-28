@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 Vue.config.productionTip = false
 
-import {registerMicroApps, start} from 'qiankun';
+import {registerMicroApps, setDefaultMountApp, start} from 'qiankun';
 
 let app = null;
 
@@ -49,7 +49,15 @@ registerMicroApps([
     entry: '//localhost:8084',
     render,
     activeRule: genActiveRule('/sys'),
+  },
+  {
+    name: 'vue',
+    entry: '//localhost:8085',
+    render,
+    activeRule: genActiveRule('/vue'),
   }
 ])
+
+setDefaultMountApp('/');
 
 start()
