@@ -14,7 +14,7 @@ function render({appContent, loading}) {
     app.loading = loading;
   } else {
     app = new Vue({
-      el: '#app',
+      el: '#container',
       router,
       store,
       data() {
@@ -35,8 +35,11 @@ function render({appContent, loading}) {
   }
 }
 
+render({loading: true})
+
 function genActiveRule(routerPrefix) {
-  return location => location.pathname.startsWith(routerPrefix);
+  //return location => location.pathname.startsWith(routerPrefix)
+  return location => location.hash.startsWith('#' + routerPrefix)
 }
 
 registerMicroApps([
@@ -46,7 +49,7 @@ registerMicroApps([
     entry: '//localhost:8084',
     render,
     activeRule: genActiveRule('/sys'),
-  },
-]);
+  }
+])
 
-start();
+start()

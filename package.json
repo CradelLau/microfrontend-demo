@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:sys\" \"vue-cli-service serve\"",
     "dev:sys": "cd sys && npm run dev",
-    "build": "vue-cli-service build"
+    "build": "concurrently \"npm run build:sys\" \"vue-cli-service build\"",
+    "build:sys": "cd sys && npm run build"
   },
   "dependencies": {
     "core-js": "^3.3.3",

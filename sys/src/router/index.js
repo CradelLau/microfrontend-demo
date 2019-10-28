@@ -9,12 +9,12 @@ const router = new VueRouter({
   mode: 'hash',
   routes: [
     {
-      path: '/',
+      path: '/sys',
       name: 'home',
       component: Home
     },
     {
-      path: '/about',
+      path: '/sys/about',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route

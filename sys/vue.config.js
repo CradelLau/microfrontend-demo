@@ -1,7 +1,8 @@
 // Temporary until we can use https://github.com/webpack/webpack-dev-server/pull/2143
-const packageName = 'vuecli4'
+const packageName = 'sys'
 
 module.exports = {
+  publicPath: './',
   chainWebpack: config => {
     config.output.set('library', `${packageName}-[name]`)
     config.output.set('libraryTarget', 'umd')

@@ -7,8 +7,8 @@
     -->
     <nav>
       <ol>
-        <li><a @click="goto('react15 app', '/15react15')">首页</a></li>
-        <li><a @click="goto('vue app', '/vue')">vue2 + element2</a></li>
+        <li><a @click="goto('/')">首页</a></li>
+        <li><a @click="goto('/sys')">系统管理</a></li>
       </ol>
     </nav>
     <!--<router-view/>-->
@@ -24,10 +24,12 @@ export default {
     content: String,
   },
   methods: {
-    goto(title, href) {
-      window.history.pushState({}, title, href);
-    },
-  },
+    goto(href) {
+      //location.href = href
+      //this.$router.push(href)
+      location.hash = "#" + href
+    }
+  }
 }
 </script>
 
