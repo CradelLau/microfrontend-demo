@@ -7,9 +7,8 @@
     -->
     <nav>
       <ol>
-        <li><a @click="goto('/')">首页</a></li>
+        <li><a @click="goto('/home')">首页</a></li>
         <li><a @click="goto('/sys')">系统管理</a></li>
-        <li><a @click="goto('/vue')">Vue</a></li>
       </ol>
     </nav>
     <!--<router-view/>-->

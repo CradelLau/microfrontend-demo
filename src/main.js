@@ -44,20 +44,20 @@ function genActiveRule(routerPrefix) {
 
 registerMicroApps([
   {
+    name: 'home',
+    entry: '//localhost:8085',
+    render,
+    activeRule: genActiveRule('/home'),
+  },
+  {
     name: 'sys',
     //entry: { scripts: ['//localhost:8084/js/app.js'] },
     entry: '//localhost:8084',
     render,
     activeRule: genActiveRule('/sys'),
-  },
-  {
-    name: 'vue',
-    entry: '//localhost:8085',
-    render,
-    activeRule: genActiveRule('/vue'),
   }
 ])
 
-setDefaultMountApp('/');
+setDefaultMountApp('#/home');
 
 start()
